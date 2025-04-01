@@ -12,6 +12,11 @@
   --font-family: "Arial", sans-serif;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+  }
+
 body {
   margin: 0;
   line-height: 1.5;
@@ -75,7 +80,15 @@ header nav li > a {
   font-size: small;
 }
 
-img {
-  max-width: 100%;
-  display: block;
+
+footer {
+  background-color: var(--primary-color);
+  color: #f4f4f4;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+footer > * {
+  display: flex;
+  flex-direction: column;
 }
