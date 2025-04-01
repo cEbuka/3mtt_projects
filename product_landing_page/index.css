@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --background-color: #f4f4f4;
+  --text-color: #333;
+  --font-family: "Arial", sans-serif;
+}
+
+body {
+  margin: 0;
+  line-height: 1.5;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+  padding-inline: 1.5rem;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  color: #f4f4f4;
+}
+
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+header nav > li {
+  list-style-type: none;
+}
+header nav li > a {
+  text-decoration: none;
+  color: #f4f4f4;
+}
+
+.hero {
+  background-image: url("assets/hero_image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 3.5rem;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.products .features {
+  height: 100%;
+  padding: 1rem;
+  outline: 2px solid var(--primary-color);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.products .features > img {
+  width: 200px;
+  margin: auto;
+}
+
+.products .features > h2 {
+  font-size: small;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
