@@ -4,19 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-tracker</title>
-    <link rel="stylesheet" href="./index.css"/>
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
-  <body>
+  <body id="home">
     <header>
-      <h1>E-tracker</h1>
+      <a href="#home"><h1>E-tracker</h1></a>
       <nav>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#hero">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </nav>
     </header>
     <main>
-      <section class="hero">
+      <section class="hero" id="about">
         <h1 class="product-title">Track Your Order</h1>
         <p class="product-description">
           Welcome to MapTracker, we offer you the service of tracking your order
@@ -52,12 +56,16 @@
         </article>
       </section>
     </main>
-    <footer>
+    <footer id="contact">
       <form>
+        <h3>Send a message</h3>
         <textarea rows="6"></textarea>
-        <button>Send</button>
+        <a href="mailto:danebuka20@gmail.com"><button>Send</button></a>
       </form>
-      <a href="https://x.com/Ebukazky" target="_blank">Twitter</a>
+      <a href="https://x.com/Ebukazky" target="_blank" class="twitter"
+        ><i class="fa fa-twitter"></i
+      ></a>
+      <p>&copy;Simon Chukwuebuka 2025</p>
     </footer>
   </body>
 </html>

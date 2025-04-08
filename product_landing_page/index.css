@@ -13,9 +13,29 @@
 }
 
 img {
-    max-width: 100%;
-    display: block;
-  }
+  max-width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+button {
+  all: unset;
+  background-color: #2ecc71;
+  padding-inline: 0.8rem;
+  padding-block: 0.4rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  outline: 2px solid #fff;
+}
 
 body {
   margin: 0;
@@ -26,9 +46,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--primary-color);
-  padding-inline: 1.5rem;
+  background-color: #333;
+  padding-inline: 1rem;
   flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  width: 100%;
 }
 
 header h1 {
@@ -46,6 +69,15 @@ header nav > li {
 header nav li > a {
   text-decoration: none;
   color: #f4f4f4;
+  font-weight: bold;
+}
+
+header nav li > a:hover {
+  color: var(--primary-color);
+}
+
+.active {
+  color: var(--secondary-color);
 }
 
 .hero {
@@ -58,7 +90,6 @@ header nav li > a {
 
 .products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   gap: 1rem;
   padding: 1.5rem;
 }
@@ -80,15 +111,48 @@ header nav li > a {
   font-size: small;
 }
 
-
 footer {
   background-color: var(--primary-color);
   color: #f4f4f4;
+  padding-inline: 1rem;
   text-align: center;
-  padding: 1.5rem;
 }
 
 footer > * {
+  text-align: left;
+  margin: 0;
+}
+
+footer form {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+}
+
+footer p {
+  text-align: center;
+  font-size: 15px;
+}
+
+footer .twitter {
+  font-size: 35px;
+  transition: font-size 0.3s ease-in-out;
+}
+
+footer .twitter:hover {
+  font-size: 40px;
+}
+
+@media (min-width: 480px) {
+  .hero .product-description {
+    width: 40%;
+  }
+  .products {
+    grid-template-columns: repeat(3, minmax(10rem, 1fr));
+  }
+
+  footer form textarea {
+    width: 40%;
+  }
 }
